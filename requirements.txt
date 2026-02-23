@@ -1,0 +1,6 @@
+# requirements.txt
+Flask
+Flask-CORS
+pandas
+Pillow # Para el manejo básico de imágenes
+openpyxl # Si realmente quieres escribir en un .xlsx

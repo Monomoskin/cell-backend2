@@ -1,0 +1,46 @@
+{
+  "sample_key": "test1-20260201060944-aad6eb",
+  "height_mm": 3.98,
+  "total_volume_ml": 0.9526,
+  "cells": [
+    {
+      "cell_id": "test1-20260201060944-aad6eb_cell2",
+      "class": "potato",
+      "volume_ml": 0.9526,
+      "area_mm2": 239.2,
+      "height_mm": 3.98,
+      "defective_percent": 0.0,
+      "quality_percent": 100.0,
+      "species": null,
+      "stage": null,
+      "quality_label": null,
+      "score": 0.997,
+      "center": [
+        1449,
+        1850
+      ]
+    }
+  ],
+  "predicted_attributes": {
+    "test1-20260201060944-aad6eb_cell2": {
+      "class": "potato",
+      "species": null,
+      "stage": null,
+      "quality_from_model": null,
+      "score": 0.997394323348999,
+      "volume_ml": 0.9526,
+      "area_mm2": 239.2,
+      "height_mm": 3.98,
+      "defective_area_mm2": 0.0,
+      "defective_percent": 0.0,
+      "final_quality_percent": 100.0
+    }
+  },
+  "images": {
+    "top_clean": "/Users/mac/Desktop/volume-estimator copia/backend/predicted_images/2026-02-01/test1/test1-20260201060944-aad6eb_TOP_clean.jpg",
+    "top_with_text": "/Users/mac/Desktop/volume-estimator copia/backend/predicted_images/2026-02-01/test1/test1-20260201060944-aad6eb_TOP_with_text.jpg",
+    "side_clean": "/Users/mac/Desktop/volume-estimator copia/backend/predicted_images/2026-02-01/test1/test1-20260201060944-aad6eb_SIDE_clean.jpg",
+    "side_with_text": "/Users/mac/Desktop/volume-estimator copia/backend/predicted_images/2026-02-01/test1/test1-20260201060944-aad6eb_SIDE_with_text.jpg"
+  },
+  "status": "success"
+}
