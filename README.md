@@ -1,4 +1,3 @@
-Aquí tienes el **README.md completo en inglés**, listo para copiar y pegar directamente en tu repositorio GitHub. Está diseñado para tu setup (macOS + CPU), incluye todo lo solicitado por tu supervisor y refleja fielmente el flujo de trabajo de tu `predict.py` (dual-image con calibración dinámica de frasco, detección de daño exploratoria, outputs CSV/XLSX, etc.).
 
 ````markdown
 # High-Throughput Bamboo Callus Volume Estimation
