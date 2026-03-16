@@ -1,5 +1,5 @@
 
-````markdown
+
 # High-Throughput Bamboo Callus Volume Estimation
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
@@ -36,7 +36,7 @@ This repository implements a non-destructive, high-throughput pipeline for estim
    git clone https://github.com/Monomoskin/cell-backend2.git
    cd cell-backend2
    ```
-````
+
 
 2. (Recommended) Create and activate a virtual environment:
 
