@@ -35,7 +35,7 @@ def setup_predictor():
         return
     
     print("[Backend] Cargando modelo Detectron2 (una sola vez)...")
-    
+  
     # Rutas - ajústalas según tu estructura real
     current_dir = os.path.dirname(os.path.abspath(__file__))
     model_path = os.path.join(current_dir, "final_model", "model_final.pth")
@@ -69,10 +69,26 @@ def setup_predictor():
     cfg.MODEL.ROI_HEADS.SCORE_THRESH_TEST = 0.30
     cfg.MODEL.DEVICE = "cpu"   # cambia a "cuda" si tienes GPU
     
+    print(f"[DEBUG] PyTorch {torch.__version__} - Forzando weights_only=False para custom model")
+    
+
+    # Carga EXPLÍCITA con False
+    checkpoint = torch.load(model_path, map_location="cpu", weights_only=False)
+    
+    # Crea el predictor (config sin weights cargados aún)
     PREDICTOR = DefaultPredictor(cfg)
+    
+    # Asigna state_dict manualmente
+    if isinstance(checkpoint, dict) and "model" in checkpoint:
+        PREDICTOR.model.load_state_dict(checkpoint["model"])
+        print("[DEBUG] Cargado desde checkpoint['model']")
+    else:
+        PREDICTOR.model.load_state_dict(checkpoint)
+        print("[DEBUG] Cargado state_dict directo")
+    
     METADATA = metadata
     
-    print("[Backend] Modelo cargado correctamente.")
+    print("[Backend] Modelo cargado correctamente con fix.")
 
 
 def find_highest_score_instance(instances, class_id):
