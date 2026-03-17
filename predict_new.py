@@ -38,9 +38,9 @@ def setup_predictor():
     
     # Rutas - ajústalas según tu estructura real
     current_dir = os.path.dirname(os.path.abspath(__file__))
-    model_path = os.path.join(current_dir, "..", "output_train_attr", "model_final.pth")
-    json_path = os.path.join(current_dir, "..", "annotations", "coco_annotations_multiattr.json")
-    image_dir = os.path.join(current_dir, "..", "images")  # solo para register
+    model_path = os.path.join(current_dir, "final_model", "model_final.pth")
+    json_path = os.path.join(current_dir, "annotations", "coco_annotations_multiattr.json")
+    image_dir = os.path.join(current_dir, "images")  # solo para register
     
     dataset_name = "celulas_frascos_attr"
     
